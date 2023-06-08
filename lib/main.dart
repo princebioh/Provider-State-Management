@@ -21,7 +21,7 @@ class MainPage extends StatelessWidget {
   const MainPage({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    print('Building MainPage');
+    // print('Building MainPage');
     return ChangeNotifierProvider(
       create: (context) => AppData(),
       builder: (context, child) {
@@ -44,7 +44,7 @@ class Screen2 extends StatelessWidget {
   const Screen2({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    print('Building Screen2');
+    // print('Building Screen2');
     return Container(
       child: const Screen3(),
     );
@@ -55,7 +55,7 @@ class Screen3 extends StatelessWidget {
   const Screen3({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    print('Building Screen3');
+    // print('Building Screen3');
     return Container(
       child: const Screen4(),
     );
@@ -66,7 +66,7 @@ class Screen4 extends StatelessWidget {
   const Screen4({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    print('Building Screen4');
+    // print('Building Screen4');
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -79,7 +79,7 @@ class Screen4 extends StatelessWidget {
           ElevatedButton(
             onPressed: () {
               // Provider.of<AppData>(context, listen: false).changeData("Davies");
-              context.read<AppData>().changeData("Davies Samuel");
+              context.read<AppData>().changeData("Prince Bioh");
             },
             child: const Text('Change data'),
           ),
