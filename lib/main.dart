@@ -27,7 +27,11 @@ class MainPage extends StatelessWidget {
       builder: (context, child) {
         return Scaffold(
           appBar: AppBar(
-            title: Text(Provider.of<AppData>(context).name),
+            title: Consumer<AppData>(
+              builder: (context, value, child) {
+                return Text(value.name);
+              },
+            ),
           ),
           body: const Screen2(),
         );
@@ -67,9 +71,16 @@ class Screen4 extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(Provider.of<AppData>(context).name),
+          Consumer<AppData>(
+            builder: (context, value, child) {
+              return Text(value.name);
+            },
+          ),
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              // Provider.of<AppData>(context, listen: false).changeData("Davies");
+              context.read<AppData>().changeData("Davies Samuel");
+            },
             child: const Text('Change data'),
           ),
         ],
