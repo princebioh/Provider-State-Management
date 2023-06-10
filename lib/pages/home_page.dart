@@ -24,6 +24,20 @@ class HomePage extends StatelessWidget {
           ),
         ],
       ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              "My Name is Prince Bioh",
+              style: TextStyle(
+                fontSize: 25,
+                fontFamily: "Arial",
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
