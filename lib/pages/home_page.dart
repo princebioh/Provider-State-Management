@@ -28,12 +28,16 @@ class HomePage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              "My Name is Prince Bioh",
-              style: TextStyle(
-                fontSize: 25,
-                fontFamily: "Arial",
-              ),
+            Consumer<SettingsData>(
+              builder: (context, value, child) {
+                return Text(
+                  "My Name is Prince Bioh",
+                  style: TextStyle(
+                    fontSize: value.fontSize,
+                    fontFamily: value.fontFamily,
+                  ),
+                );
+              },
             ),
           ],
         ),
