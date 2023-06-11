@@ -23,4 +23,13 @@ class SettingsData with ChangeNotifier {
     _fontSize = newFont;
     notifyListeners();
   }
+
+  // Dark Theme Settings
+  bool _isDarkTheme = false;
+  bool get isDarkTheme => _isDarkTheme;
+
+  set isDarkTheme(bool newVal) {
+    _isDarkTheme = newVal;
+    notifyListeners();
+  }
 }
