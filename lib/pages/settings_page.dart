@@ -102,6 +102,21 @@ class _SettingsPageState extends State<SettingsPage> {
                 ),
               ],
             ),
+            ListTile(
+              leading: const CircleAvatar(
+                backgroundColor: Colors.white,
+                child: Icon(Icons.brightness_6),
+              ),
+              title: const Text("Theme"),
+              subtitle: const Text("Light"),
+              onTap: () {
+                showDialog(
+                    context: context,
+                    builder: (context) {
+                      return AlertDialog();
+                    });
+              },
+            ),
           ],
         ),
       ),

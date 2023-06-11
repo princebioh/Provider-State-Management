@@ -23,9 +23,12 @@ class MyApp extends StatelessWidget {
         ),
       ],
       builder: (context, child) {
-        return const MaterialApp(
+        return MaterialApp(
           initialRoute: RouteManager.homePage,
           onGenerateRoute: RouteManager.routeNav,
+          darkTheme: context.watch<SettingsData>().isDarkTheme
+              ? ThemeData.dark()
+              : null,
         );
       },
     );
