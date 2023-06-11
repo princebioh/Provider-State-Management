@@ -33,9 +33,9 @@ class HomePage extends StatelessWidget {
                 return Text(
                   "My Name is Prince Bioh",
                   style: TextStyle(
-                    fontSize: value.fontSize,
-                    fontFamily: value.fontFamily,
-                  ),
+                      fontSize: value.fontSize,
+                      fontFamily: value.fontFamily,
+                      fontStyle: FontStyle.italic),
                 );
               },
             ),
