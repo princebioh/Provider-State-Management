@@ -9,9 +9,12 @@ class SettingsPage extends StatefulWidget {
   State<SettingsPage> createState() => _SettingsPageState();
 }
 
+final themes = ["Light", "Dark"];
+
 class _SettingsPageState extends State<SettingsPage> {
   TextEditingController fontFamilyController = TextEditingController();
   TextEditingController fontSizeController = TextEditingController();
+  String groupValue = themes[0];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -101,21 +104,6 @@ class _SettingsPageState extends State<SettingsPage> {
                   child: const Text("Submit"),
                 ),
               ],
-            ),
-            ListTile(
-              leading: const CircleAvatar(
-                backgroundColor: Colors.white,
-                child: Icon(Icons.brightness_6),
-              ),
-              title: const Text("Theme"),
-              subtitle: const Text("Light"),
-              onTap: () {
-                showDialog(
-                    context: context,
-                    builder: (context) {
-                      return AlertDialog();
-                    });
-              },
             ),
           ],
         ),
