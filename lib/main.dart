@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
         return MaterialApp(
           initialRoute: RouteManager.homePage,
           onGenerateRoute: RouteManager.routeNav,
-          darkTheme: context.watch<SettingsData>().isDarkTheme
+          theme: context.watch<SettingsData>().isDarkTheme
               ? ThemeData.dark()
               : null,
         );

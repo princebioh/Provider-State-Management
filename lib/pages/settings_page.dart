@@ -9,12 +9,10 @@ class SettingsPage extends StatefulWidget {
   State<SettingsPage> createState() => _SettingsPageState();
 }
 
-final themes = ["Light", "Dark"];
-
 class _SettingsPageState extends State<SettingsPage> {
   TextEditingController fontFamilyController = TextEditingController();
   TextEditingController fontSizeController = TextEditingController();
-  String groupValue = themes[0];
+  bool isSwtich = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -105,6 +103,23 @@ class _SettingsPageState extends State<SettingsPage> {
                 ),
               ],
             ),
+            ListTile(
+              leading: Icon(Icons.brightness_6),
+              title: Text("Dark Mode"),
+              trailing: Switch(
+                value: isSwtich,
+                onChanged: (value) {
+                  setState(() {
+                    isSwtich = value;
+                  });
+                  if (isSwtich) {
+                    context.read<SettingsData>().isDarkTheme = true;
+                  } else {
+                    context.read<SettingsData>().isDarkTheme = false;
+                  }
+                },
+              ),
+            )
           ],
         ),
       ),
