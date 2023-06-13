@@ -104,8 +104,8 @@ class _SettingsPageState extends State<SettingsPage> {
               ],
             ),
             ListTile(
-              leading: Icon(Icons.brightness_6),
-              title: Text("Dark Mode"),
+              leading: const Icon(Icons.brightness_6),
+              title: const Text("Dark Mode"),
               trailing: Switch(
                 value: isSwtich,
                 onChanged: (value) {
@@ -119,7 +119,7 @@ class _SettingsPageState extends State<SettingsPage> {
                   }
                 },
               ),
-            )
+            ),
           ],
         ),
       ),

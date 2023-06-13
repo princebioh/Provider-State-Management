@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
           onGenerateRoute: RouteManager.routeNav,
           theme: context.watch<SettingsData>().isDarkTheme
               ? ThemeData.dark()
-              : null,
+              : ThemeData.light(),
         );
       },
     );
